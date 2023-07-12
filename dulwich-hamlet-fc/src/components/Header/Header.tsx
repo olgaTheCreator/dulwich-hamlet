@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Logo from "./logo";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 const bgColor = [
   {
@@ -30,14 +30,29 @@ type BgColorType = (typeof bgColor)[number];
 const Header = () => {
   const [currentColor, setCurrentColor] =
     useState<BgColorType["color"]>("none");
+  // const ref = useRef(null);
   const currentBgColor = bgColor.find((color) => color.color == currentColor);
+  // const { scrollY } = useScroll({
+  //   container: ref,
+  // });
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScrollButton = () => {
+      window.scrollY > 60 ? setScrolled(true) : setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScrollButton);
+    return () => {
+      window.removeEventListener("scroll", handleScrollButton);
+    };
+  }, []);
   return (
-    <div
-      className={`bg-player w-full h-screen bg-fixed bg-cover bg-center transition-all duration-300 flex flex-col relative bg-clip-text ${
+    <motion.div
+      // ref={ref}
+      className={`bg-player relative h-screen w-full bg-cover bg-center transition-all duration-300 ${
         currentBgColor != undefined
           ? `${currentBgColor.pageStyle} ${currentBgColor.buttonStyle}`
           : ""
-      }`}
+      } flex flex-col relative ${scrolled ? "bg-clip-text " : ""} `}
     >
       <div className=" h-fit flex w-full justify-self-start place-self-start">
         {bgColor.map((color) => (
@@ -48,12 +63,19 @@ const Header = () => {
             onClick={() => setCurrentColor(color.color)}
           ></motion.button>
         ))}
-      </div>
-      <div className=" w-full relative h-max place-self-center flex flex-col my-28 text-transparent gap-2 text-shadow text-clip">
-        <h1 className="font-extrabold text-7xl">DULWICH HAMLET</h1>
-        <h2 className="font-bold text-6xl ">WOMEN FIRST XI</h2>
-      </div>
-    </div>
+      </div>{" "}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.2, rotate: 0 }}
+        animate={{ opacity: 1, scale: 1, rotate: 360 }}
+        transition={{ delay: 1, duration: 1.5 }}
+        className={` w-full relative h-max place-self-center flex flex-col my-28 ${
+          scrolled ? "text-transparent" : "text-red"
+        } `}
+      >
+        <h1 className="font-extrabold text-6xl lg:text-9xl">DULWICH HAMLET</h1>
+        <h2 className="font-bold text-5xl lg:text-8xl">WOMEN FIRST XI</h2>
+      </motion.div>
+    </motion.div>
   );
 };
 

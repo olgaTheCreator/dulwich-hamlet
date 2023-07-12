@@ -16,13 +16,18 @@ module.exports = {
         pink: {
           DEFAULT: "rgba(226, 126, 187, 1)",
         },
+        red: {
+          DEFAULT: "#ff0022",
+        },
         off_white: "rgba(245, 245, 243, 1)",
         cyan: "rgba(126, 226, 190, 1)",
+        deep_sky: "#30C5FF",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 4px 4px var(--tw-shadow-color)",
         lg: "0 8px 16px var(--tw-shadow-color)",
+        inner: "0px 2px 1px var(--tw-shadow-color)",
       },
     },
   },
