@@ -1,13 +1,13 @@
 import { WatchUsPlaySvg } from "./WatchUsPlaySvg";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 export const WatchUsPlay = () => {
+  const { scrollYProgress } = useScroll();
+  console.log(scrollYProgress);
   return (
     <motion.div
-      initial={{ y: 0 }}
-      whileInView={{ y: -100 }}
-      transition={{ duration: 2, delay: 1 }}
-      className="h-fit flex place-items-center bg-off_white shadow-md "
+      transition={{ duration: 1 }}
+      className={`h-fit z-50 flex place-items-center `}
     >
       <WatchUsPlaySvg />
     </motion.div>

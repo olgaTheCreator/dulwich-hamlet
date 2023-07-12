@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Logo from "./logo";
 import { motion, useScroll } from "framer-motion";
+import { WatchUsPlay } from "../WatchUsPlay/WatchUsPlay";
 
 const bgColor = [
   {
@@ -38,7 +39,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScrollButton = () => {
-      window.scrollY > 60 ? setScrolled(true) : setScrolled(false);
+      window.scrollY > 100 ? setScrolled(true) : setScrolled(false);
     };
     window.addEventListener("scroll", handleScrollButton);
     return () => {
@@ -52,7 +53,7 @@ const Header = () => {
         currentBgColor != undefined
           ? `${currentBgColor.pageStyle} ${currentBgColor.buttonStyle}`
           : ""
-      } flex flex-col relative ${scrolled ? "bg-clip-text " : ""} `}
+      } flex flex-col relative ${scrolled ? "bg-clip-text" : ""} `}
     >
       <div className=" h-fit flex w-full justify-self-start place-self-start">
         {bgColor.map((color) => (
@@ -68,13 +69,20 @@ const Header = () => {
         initial={{ opacity: 0, scale: 0.2, rotate: 0 }}
         animate={{ opacity: 1, scale: 1, rotate: 360 }}
         transition={{ delay: 1, duration: 1.5 }}
-        className={` w-full relative h-max place-self-center flex flex-col my-28 ${
+        className={` w-full relative h-max place-self-center flex flex-col my-28 transition-all duration-300 ${
           scrolled ? "text-transparent" : "text-red"
         } `}
       >
         <h1 className="font-extrabold text-6xl lg:text-9xl">DULWICH HAMLET</h1>
         <h2 className="font-bold text-5xl lg:text-8xl">WOMEN FIRST XI</h2>
       </motion.div>
+      <div
+        className={`transition-all duration-500 ${
+          scrolled ? "opacity-100" : " opacity-0"
+        }`}
+      >
+        <WatchUsPlay />
+      </div>
     </motion.div>
   );
 };

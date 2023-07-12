@@ -5,9 +5,10 @@ import { WatchUsPlay } from "./components/WatchUsPlay/WatchUsPlay";
 
 function App() {
   return (
-    <main className="bg-off_white">
+    <main className="bg-off_white flex flex-col gap-10">
       <Header />
-      <WatchUsPlay />
+      <div className="h-96"></div>
+      {/* <WatchUsPlay /> */}
     </main>
   );
 }
