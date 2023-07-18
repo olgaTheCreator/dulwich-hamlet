@@ -10,11 +10,32 @@ module.exports = {
         player: "url('/src/assets/player.png')",
       },
       colors: {
-        blue: {
-          DEFAULT: "rgba(57, 55, 146, 1)",
+        dark: {
+          background: "#1c1a29",
+          text: "rgba(226, 126, 187, 1)",
         },
         pink: {
           DEFAULT: "rgba(226, 126, 187, 1)",
+          background: "rgba(226, 126, 187, 1)",
+          text: "rgba(226, 126, 187, 1)",
+        },
+        light: {
+          background: "rgba(245, 245, 243, 1)",
+          text: "rgba(57, 55, 146, 1)",
+        },
+        blue: {
+          DEFAULT: "rgba(57, 55, 146, 1)",
+          background: "#1c1a29",
+          text: "rgba(226, 126, 187, 1)",
+          100: "#DADAF1",
+          200: "#B6B5E3",
+          300: "#9190D5",
+          400: "#6D6BC7",
+          500: "#4846B9",
+          600: "#393792",
+          700: "#2B2A6F",
+          800: "#1D1C4A",
+          900: "#0E0E25",
         },
         red: {
           DEFAULT: "#ff0022",
