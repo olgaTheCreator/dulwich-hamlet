@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import { WatchUsPlay } from "./components/WatchUsPlay/WatchUsPlay";
 import { Wrapper } from "./components/Wrapper/Wrapper";
 import { useThemeContext } from "./utilities/hooks/useThemeContext";
-import { ThemeContextInterface } from "./utilities/types";
+import { ThemeContextInterface } from "./utilities/types/types";
 
 function App() {
   return (

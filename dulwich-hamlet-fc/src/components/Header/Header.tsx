@@ -3,7 +3,7 @@ import Logo from "./logo";
 import { motion, useScroll } from "framer-motion";
 import { WatchUsPlay } from "../WatchUsPlay/WatchUsPlay";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
-import { ThemeContextInterface } from "../../utilities/types";
+import { ThemeContextInterface } from "../../utilities/types/types";
 
 // const bgColor = [
 //   {

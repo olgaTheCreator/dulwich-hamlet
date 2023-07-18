@@ -5,6 +5,11 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    colors: {
+      primary: "var(--theme-primary)",
+      secondary: "var(--theme-secondary)",
+      "text-base": "var(--theme-text-base)",
+    },
     extend: {
       backgroundImage: {
         player: "url('/src/assets/player.png')",

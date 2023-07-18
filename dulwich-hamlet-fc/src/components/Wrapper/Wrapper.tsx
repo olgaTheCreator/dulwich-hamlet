@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
-import { ThemeContextInterface, themeColor } from "../../utilities/types";
+import { ThemeContextInterface, themeColor } from "../../utilities/types/types";
 
 // const bgColor = [
 //   {
@@ -48,7 +48,7 @@ export const Wrapper = () => {
         {color.map((color) => (
           <motion.button
             key={color}
-            className={`h-8 w-8 m-2 border-4 transition-all duration-300 border-${color}-background`}
+            className={`h-8 w-8 m-2 border-4 transition-all duration-300 bg-primary`}
             onClick={() => {
               setTheme(color);
               console.log(theme);
