@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
-import { ThemeContextInterface, themeColor } from "../../utilities/types/types";
+import { ThemeContextInterface, ThemeColor } from "../../utilities/types/types";
 
 // const bgColor = [
 //   {
@@ -29,7 +28,7 @@ import { ThemeContextInterface, themeColor } from "../../utilities/types/types";
 
 // type BgColorType = (typeof bgColor)[number];
 
-const color: themeColor[] = ["dark", "pink", "cyan", "light"];
+const color: ThemeColor[] = ["dark", "pink", "cyan", "light"];
 
 export const Wrapper = () => {
   const { theme, setTheme } = useThemeContext() as ThemeContextInterface;

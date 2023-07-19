@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import Logo from "./logo";
-import { motion, useScroll } from "framer-motion";
+import { useEffect, useState } from "react";
+//import Logo from "./logo";
+import { motion } from "framer-motion";
 import { WatchUsPlay } from "../WatchUsPlay/WatchUsPlay";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
 import { ThemeContextInterface } from "../../utilities/types/types";
@@ -39,7 +39,7 @@ const Header = () => {
   //   container: ref,
   // });
   const [scrolled, setScrolled] = useState(false);
-  const { theme, setTheme } = useThemeContext() as ThemeContextInterface;
+  const { theme } = useThemeContext() as ThemeContextInterface;
   console.log("theme: ", theme);
   useEffect(() => {
     const handleScrollButton = () => {

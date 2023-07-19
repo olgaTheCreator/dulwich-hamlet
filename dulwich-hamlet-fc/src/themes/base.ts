@@ -1,6 +1,6 @@
-import { theme } from "../utilities/types/types";
+import { Theme } from "../utilities/types/types";
 
-export const baseTheme: theme = {
+export const baseTheme: Theme = {
   "--theme-primary": "blue",
   "--theme-secondary": "red",
   "--theme-text-base": "white",
