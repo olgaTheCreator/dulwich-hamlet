@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
 import { ThemeContextInterface, ThemeColor } from "../../utilities/types/types";
+import { Button } from "../Button";
+import { applyTheme } from "../../themes/utils";
+import { darkTheme } from "../../themes/dark";
+import { baseTheme } from "../../themes/base";
+import { pinkTheme } from "../../themes/pink";
+import { cyanTheme } from "../../themes/cyan";
+import { ThemeButton } from "../ThemeButton";
 
 // const bgColor = [
 //   {
@@ -28,10 +35,18 @@ import { ThemeContextInterface, ThemeColor } from "../../utilities/types/types";
 
 // type BgColorType = (typeof bgColor)[number];
 
-const color: ThemeColor[] = ["dark", "pink", "cyan", "light"];
+// const color: ThemeColor[] = ["dark", "pink", "cyan", "light"];
+
+const themeColorButton: ThemeColor[] = ["pink", "dark", "cyan", "light"];
+const themes = {
+  pink: pinkTheme,
+  dark: darkTheme,
+  cyan: cyanTheme,
+  light: baseTheme,
+};
 
 export const Wrapper = () => {
-  const { theme, setTheme } = useThemeContext() as ThemeContextInterface;
+  // const { theme, setTheme } = useThemeContext() as ThemeContextInterface;
   //   const [currentColor, setCurrentColor] =
   //     useState<BgColorType["color"]>("none");
 
@@ -44,16 +59,26 @@ export const Wrapper = () => {
         } `}
       > */}
       <div className="absolute top-0 left-0 h-fit flex w-full justify-self-start place-self-start z-50">
-        {color.map((color) => (
-          <motion.button
+        {themeColorButton.map((color) => (
+          <ThemeButton
             key={color}
-            className={`h-8 w-8 m-2 border-4 transition-all duration-300 bg-primary`}
-            onClick={() => {
-              setTheme(color);
-              console.log(theme);
-            }}
-          ></motion.button>
+            color={color}
+            // className={`h-8 w-8 m-2 border-4 transition-all duration-300 bg-primary`}
+            onClick={() => applyTheme(themes[color])}
+          ></ThemeButton>
         ))}
+        {/* <Button
+          color="primary"
+          // key={color}
+          // className={`h-8 w-8 m-2 border-4 transition-all duration-300 bg-primary`}
+          onClick={() => applyTheme(darkTheme)}
+        ></Button>
+        <Button
+          color="secondary"
+          // key={color}
+          // className={`h-8 w-8 m-2 border-4 transition-all duration-300 bg-primary`}
+          onClick={() => applyTheme(baseTheme)}
+        ></Button> */}
       </div>
       {/* {children} */}
       {/* </motion.div> */}

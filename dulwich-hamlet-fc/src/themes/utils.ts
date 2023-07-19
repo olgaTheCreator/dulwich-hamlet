@@ -1,4 +1,5 @@
-import { Theme } from "../utilities/types/types";
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { ThemeColors, Theme } from "../utilities/types/types";
 
 export function applyTheme(theme: Theme) {
   const root = document.documentElement;
@@ -7,4 +8,20 @@ export function applyTheme(theme: Theme) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     root.style.setProperty(cssVar, theme[cssVar]);
   });
+}
+
+export function createTheme({
+  primary,
+  primaryLight,
+  secondary,
+  secondaryLight,
+  textBase,
+}: ThemeColors) {
+  return {
+    "--theme-primary": primary,
+    "--theme-primary-light": primaryLight,
+    "--theme-secondary": secondary,
+    "--theme-secondary-light": secondaryLight,
+    "--theme-text-base": textBase,
+  };
 }
