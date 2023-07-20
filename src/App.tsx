@@ -15,7 +15,7 @@ function App() {
     <main className={`${backGroundVariants["secondary"]} flex flex-col`}>
       <Wrapper />
       <Header />
-      <div className="h-96"></div>
+      <div className=" h-96"></div>
       {/* <WatchUsPlay /> */}
     </main>
   );

@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { WatchUsPlay } from "../WatchUsPlay/WatchUsPlay";
 import { useThemeContext } from "../../utilities/hooks/useThemeContext";
 import { ThemeContextInterface } from "../../utilities/types/types";
-import { backGroundVariants } from "../../themes/colorVariants";
+import {
+  backGroundTransparentVariants,
+  backGroundVariants,
+} from "../../themes/colorVariants";
+import { UpcomingMatches } from "../UpcomingMatches/UpcomingMatches";
+import upcomingMatches from "../../data/upcomingMatches.json";
 
 const Header = () => {
   // const [currentColor, setCurrentColor] =
@@ -56,7 +61,7 @@ const Header = () => {
         initial={{ opacity: 0, scale: 0.2, rotate: 0 }}
         animate={{ opacity: 1, scale: 1, rotate: 360 }}
         transition={{ delay: 1, duration: 1.5 }}
-        className={` w-full relative h-max place-self-center flex flex-col my-28 transition-all duration-300  ${
+        className={` w-full relative h-max place-self-center flex flex-col mt-28 mb-8 transition-all duration-300  ${
           scrolled ? "text-transparent" : "text-red"
         } `}
       >
@@ -69,6 +74,11 @@ const Header = () => {
         }`}
       >
         <WatchUsPlay />
+        <div
+          className={`bg-repeat bg-top w-full  text-text-base  ${backGroundVariants["secondary"]} h-max`}
+        >
+          <UpcomingMatches matches={upcomingMatches} />
+        </div>
       </div>
     </div>
   );

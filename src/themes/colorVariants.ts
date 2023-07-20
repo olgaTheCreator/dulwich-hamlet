@@ -14,3 +14,7 @@ export const backGroundVariants = {
   primary: "bg-primary",
   secondary: "bg-secondary",
 };
+
+export const backGroundTransparentVariants = {
+  primary: "bg-background-transparent",
+};

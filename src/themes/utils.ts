@@ -13,6 +13,7 @@ export function applyTheme(theme: Theme) {
 export function createTheme({
   primary,
   primaryLight,
+  backgroundTransparent,
   secondary,
   secondaryLight,
   textBase,
@@ -20,6 +21,7 @@ export function createTheme({
   return {
     "--theme-primary": primary,
     "--theme-primary-light": primaryLight,
+    "--theme-background-transparent": backgroundTransparent,
     "--theme-secondary": secondary,
     "--theme-secondary-light": secondaryLight,
     "--theme-text-base": textBase,

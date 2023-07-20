@@ -19,6 +19,7 @@ export interface ThemeButtonPropsInterface
 export interface ThemeColors {
   primary: string;
   primaryLight: string;
+  backgroundTransparent: string;
   secondary: string;
   secondaryLight: string;
   textBase: string;
@@ -26,7 +27,25 @@ export interface ThemeColors {
 export interface Theme {
   "--theme-primary": ThemeColors["primary"];
   "--theme-primary-light": ThemeColors["primaryLight"];
+  "--theme-background-transparent": ThemeColors["backgroundTransparent"];
   "--theme-secondary": ThemeColors["secondary"];
   "--theme-secondary-light": ThemeColors["secondaryLight"];
   "--theme-text-base": ThemeColors["textBase"];
+}
+
+export type Matches = Array<Match>;
+
+export interface Match {
+  date: string;
+  opponent: string;
+}
+
+export interface UpcomingProps {
+  matches: Matches;
+}
+
+export interface MatchDate {
+  month: string;
+  day: string;
+  time: string;
 }

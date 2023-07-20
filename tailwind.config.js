@@ -8,6 +8,7 @@ module.exports = {
     colors: {
       primary: "var(--theme-primary)",
       "primary-light": "var(--theme-primary-light)",
+      "background-transparent": "var(--theme-background-transparent)",
       secondary: "var(--theme-secondary)",
       "secondary-light": "var(--theme-secondary-light)",
       "text-base": "var(--theme-text-base)",
@@ -15,6 +16,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         player: "url('/src/assets/player.png')",
+        triangles: "url('/src/assets/bg_triangle_opt.svg')",
       },
       colors: {
         dark: {
