@@ -2,12 +2,12 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="360"
-   height="722.70905"
-   viewBox="0 0 95.25 191.21676"
+   width="358.39999"
+   height="302.84802"
+   viewBox="0 0 94.826665 80.128536"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2 (1:1.2+202206011327+fc4e4096c5)"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    sodipodi:docname="pinkHalftones.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,11 +25,11 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="0.914906"
-     inkscape:cx="231.17129"
-     inkscape:cy="338.83262"
-     inkscape:window-width="1920"
-     inkscape:window-height="1056"
-     inkscape:window-x="2560"
+     inkscape:cx="228.43877"
+     inkscape:cy="259.04301"
+     inkscape:window-width="1440"
+     inkscape:window-height="870"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
@@ -204,7 +204,8 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-0.52916648,-116.91363)">
     <path
        style="fill:#e27ebb;fill-opacity:1;stroke:none;stroke-width:0.217066"
        id="rect12482"
@@ -3267,13 +3268,6 @@
        transform="matrix(0.52178545,0,0,0.60250595,3.4924998,118.88919)"
        inkscape:path-effect="#path-effect14562"
        class="UnoptimicedTransforms" />
-    <rect
-       style="fill:#e27ebb;fill-opacity:1;stroke:none;stroke-width:0.256072"
-       id="rect14560"
-       width="95.25"
-       height="117.32915"
-       x="0"
-       y="0.43926889" />
     <path
        transform="matrix(0.52178545,0,0,-0.60250595,9.4191664,120.86475)"
        style="fill:#e27ebb;fill-opacity:1;stroke:none;stroke-width:0.264583"

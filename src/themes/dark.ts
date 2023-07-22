@@ -3,8 +3,8 @@ import { createTheme } from "./utils";
 
 export const darkTheme: Theme = createTheme({
   primary: "black",
-  primaryLight: "##332F2E",
-  backgroundTransparent: "rgba(0,0,0,0.7)",
+  primaryLight: "#332F2E",
+  backgroundTransparent: "#332F2E",
   secondary: "#4D4D4D",
   secondaryLight: "#FFA8DE",
   textBase: "white",

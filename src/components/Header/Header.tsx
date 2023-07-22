@@ -75,7 +75,7 @@ const Header = () => {
       >
         <WatchUsPlay />
         <div
-          className={`bg-repeat bg-top w-full  text-text-base  ${backGroundVariants["secondary"]} h-max`}
+          className={`bg-repeat-x bg-halftones bg-top w-full bg-cover  text-text-base  ${backGroundVariants["secondary"]} h-max`}
         >
           <UpcomingMatches matches={upcomingMatches} />
         </div>

@@ -82,7 +82,7 @@ export const UpcomingMatches = ({ matches }: UpcomingProps) => {
   console.log(matches);
   return (
     <div
-      className={`mx-auto max-w-screen-xl h-full p-4 w-full flex flex-col lg:flex-row lg:flex-wrap justify-center place-items-center gap-8`}
+      className={`mx-auto max-w-screen-xl h-full py-8 px-4 w-full flex flex-col lg:flex-row lg:flex-wrap justify-center place-items-center gap-8`}
     >
       {displayingMatches(matches)}
     </div>

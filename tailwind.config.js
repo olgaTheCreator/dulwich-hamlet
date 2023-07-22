@@ -17,6 +17,7 @@ module.exports = {
       backgroundImage: {
         player: "url('/src/assets/player.png')",
         triangles: "url('/src/assets/bg_triangle_opt.svg')",
+        halftones: "url('/src/assets/pinkHalftones.svg')",
       },
       colors: {
         dark: {
