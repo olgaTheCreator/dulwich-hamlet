@@ -6,6 +6,6 @@ export const baseTheme: Theme = createTheme({
   primaryLight: "#E6FFFFFF",
   backgroundTransparent: "rgba(255,255,255,0.9)",
   secondary: "white",
-  secondaryLight: "#ff4d4d",
+  secondaryLight: "#FFA8DE",
   textBase: "#18173C",
 });

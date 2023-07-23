@@ -6,6 +6,11 @@ import { Wrapper } from "./components/Wrapper/Wrapper";
 import { applyTheme } from "./themes/utils";
 import { baseTheme } from "./themes/base";
 import { backGroundVariants } from "./themes/colorVariants";
+import { getTimeline } from "./utilities/API/twitterAPI";
+import { TweetData } from "./utilities/types/types";
+import { Tweet } from "./components/Tweet/Tweet";
+
+// const tweets = await getTimeline();
 
 function App() {
   useEffect(() => {
@@ -15,7 +20,11 @@ function App() {
     <main className={`${backGroundVariants["secondary"]} flex flex-col`}>
       <Wrapper />
       <Header />
-      <div className=" h-96"></div>
+      {/* <div className=" h-96">
+        {tweets.map((tweet: TweetData) => (
+          <Tweet key={tweet.id} {...tweet} />
+        ))} */}
+      <div className="h-96 z-50"></div>
       {/* <WatchUsPlay /> */}
     </main>
   );

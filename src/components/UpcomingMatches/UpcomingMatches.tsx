@@ -64,7 +64,7 @@ const displayingMatches = (arr: Matches) => {
   }));
   return newArr.map(({ month, day, time, opponent }, i) => (
     <div
-      className={`h-fit  w-11/12 md:w-3/5 lg:w-2/5 ${backGroundTransparentVariants["primary"]} text-center text-2xl font-medium p-4`}
+      className={`h-fit  w-11/12 md:w-3/5 lg:w-2/5 ${backGroundTransparentVariants["primary"]} ring-4 ring-offset-4 ring-offset-primary-light ring-secondary-light text-center text-2xl font-medium p-4`}
       key={i + 1}
     >
       {month}
