@@ -5,15 +5,17 @@ export interface ThemeContextInterface {
   setTheme: React.Dispatch<React.SetStateAction<ThemeColor>>;
 }
 
-export interface ButtonPropsInterface
-  extends React.ComponentPropsWithoutRef<"input"> {
+export interface ButtonPropsInterface {
   children?: React.ReactNode;
   color: "primary" | "secondary";
+  key: ThemeColor;
+  handleTheme: () => void;
 }
 
-export interface ThemeButtonPropsInterface
-  extends React.ComponentPropsWithoutRef<"input"> {
+export interface ThemeButtonPropsInterface {
   color: ThemeColor;
+  children?: React.ReactNode;
+  key: ThemeColor;
 }
 
 export interface ThemeColors {

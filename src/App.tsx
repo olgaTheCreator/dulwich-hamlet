@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 //import { WatchUsPlay } from "./components/WatchUsPlay/WatchUsPlay";
-import { Wrapper } from "./components/Wrapper/Wrapper";
+import { Wrapper } from "./components/ThemeButtons/ThemeButtonsComponent";
 import { applyTheme } from "./themes/utils";
 import { baseTheme } from "./themes/base";
 import { backGroundVariants } from "./themes/colorVariants";
@@ -24,7 +24,7 @@ function App() {
         {tweets.map((tweet: TweetData) => (
           <Tweet key={tweet.id} {...tweet} />
         ))} */}
-      <div className="h-96 z-50"></div>
+      {/* <div className="h-96 z-50"></div> */}
       {/* <WatchUsPlay /> */}
     </main>
   );

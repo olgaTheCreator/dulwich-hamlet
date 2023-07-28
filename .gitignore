@@ -1,1 +1,2 @@
 src/utilities/API/twitter.ts
+node_modules/*
