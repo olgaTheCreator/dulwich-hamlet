@@ -1,13 +1,13 @@
 import { WatchUsPlaySvg } from "./WatchUsPlaySvg";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
-export const WatchUsPlay = () => {
-  const { scrollYProgress } = useScroll();
-  console.log(scrollYProgress);
+export const WatchUsPlay = ({ scrolled }: { scrolled: boolean }) => {
   return (
     <motion.div
       transition={{ duration: 1 }}
-      className={`h-fit z-50 flex place-items-center `}
+      className={`h-fit flex place-items-center lg:w-full lg:max-w-xl lg:ml-20 transition-all duration-500 z-20  ${
+        scrolled ? "opacity-100 invert-0" : " opacity-0"
+      }`}
     >
       <WatchUsPlaySvg />
     </motion.div>

@@ -1,31 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-//import { WatchUsPlay } from "./components/WatchUsPlay/WatchUsPlay";
-import { Wrapper } from "./components/ThemeButtons/ThemeButtonsComponent";
+import LandingPage from "./components/LandingPage/LandingPage";
+
+import { ThemeButtonsComponent } from "./components/ThemeButtons/ThemeButtonsComponent";
 import { applyTheme } from "./themes/utils";
 import { baseTheme } from "./themes/base";
 import { backGroundVariants } from "./themes/colorVariants";
-import { getTimeline } from "./utilities/API/twitterAPI";
-import { TweetData } from "./utilities/types/types";
-import { Tweet } from "./components/Tweet/Tweet";
-
-// const tweets = await getTimeline();
+import { WatchUsPlay } from "./components/WatchUsPlay/WatchUsPlay";
+import { UpcomingMatches } from "./components/UpcomingMatches/UpcomingMatches";
+import upcomingMatches from "./data/upcomingMatches.json";
 
 function App() {
   useEffect(() => {
     applyTheme(baseTheme);
   }, []);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScrollButton = () => {
+      window.scrollY > 100 ? setScrolled(true) : setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScrollButton);
+    return () => {
+      window.removeEventListener("scroll", handleScrollButton);
+    };
+  }, []);
   return (
     <main className={`${backGroundVariants["secondary"]} flex flex-col`}>
-      <Wrapper />
-      <Header />
-      {/* <div className=" h-96">
-        {tweets.map((tweet: TweetData) => (
-          <Tweet key={tweet.id} {...tweet} />
-        ))} */}
-      {/* <div className="h-96 z-50"></div> */}
-      {/* <WatchUsPlay /> */}
+      <ThemeButtonsComponent />
+      <LandingPage scrolled={scrolled}>
+        {/* <div
+          className={`transition-all duration-500 z-20  ${
+            scrolled ? "opacity-100 invert-0" : " opacity-0"
+          }`}
+        > */}
+        <WatchUsPlay scrolled={scrolled} />
+        <UpcomingMatches scrolled={scrolled} matches={upcomingMatches} />
+        {/* </div> */}
+      </LandingPage>
     </main>
   );
 }

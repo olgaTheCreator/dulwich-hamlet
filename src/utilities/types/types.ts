@@ -1,9 +1,9 @@
 export type ThemeColor = "pink" | "dark" | "cyan" | "light";
 
-export interface ThemeContextInterface {
-  theme: ThemeColor;
-  setTheme: React.Dispatch<React.SetStateAction<ThemeColor>>;
-}
+// export interface ThemeContextInterface {
+//   theme: ThemeColor;
+//   setTheme: React.Dispatch<React.SetStateAction<ThemeColor>>;
+// }
 
 export interface ButtonPropsInterface {
   children?: React.ReactNode;
@@ -12,10 +12,16 @@ export interface ButtonPropsInterface {
   handleTheme: () => void;
 }
 
+export interface LandingPageProps {
+  children?: React.ReactNode;
+  scrolled: boolean;
+}
+
 export interface ThemeButtonPropsInterface {
   color: ThemeColor;
   children?: React.ReactNode;
   key: ThemeColor;
+  handleThemeChange: (color: ThemeColor) => void;
 }
 
 export interface ThemeColors {
@@ -40,10 +46,6 @@ export type Matches = Array<Match>;
 export interface Match {
   date: string;
   opponent: string;
-}
-
-export interface UpcomingProps {
-  matches: Matches;
 }
 
 export interface MatchDate {

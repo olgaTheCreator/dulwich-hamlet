@@ -6,7 +6,7 @@ export const WatchUsPlaySvg = () => {
       viewBox="0 0 315 279"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="max-w-md"
+      className="max-w-md w-full lg:max-w-lg"
     >
       <path
         d="M13.3219 79.4801L128.466 35.9468L248.276 13.4206L280.551 89.9305L287.087 171.451L265.151 182.131L267.115 215.697L229.118 192.683L179.767 207.135L56.1367 231.129L18.8466 160.63L13.3219 79.4801Z"
