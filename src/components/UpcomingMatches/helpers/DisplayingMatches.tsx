@@ -1,5 +1,5 @@
-import { backGroundTransparentVariants } from "../../themes/colorVariants";
-import { Match, MatchDate, Matches } from "../../utilities/types/types";
+import { backGroundTransparentVariants } from "../../../themes/colorVariants";
+import { Match, MatchDate, Matches } from "../../../utilities/types/types";
 
 const ordinal = (n: number) => {
   const s = ["th", "st", "nd", "rd"];
@@ -56,7 +56,7 @@ export const displayingMatches = (arr: Matches) => {
   }));
   return newArr.map(({ month, day, time, opponent }) => (
     <div
-      className={`h-fit  w-11/12 md:w-3/5 lg:w-2/5 ${backGroundTransparentVariants["primary"]} ring-4 ring-offset-4 ring-offset-primary-light ring-secondary-light text-center text-2xl font-medium p-4`}
+      className={`h-fit  w-11/12 md:w-3/5 lg:w-2/5 ${backGroundTransparentVariants["primary"]} ring-4 ring-offset-4 ring-offset-primary-light ring-secondary-light text-center text-2xl lg:text-3xl font-medium   p-4`}
       key={month + day}
     >
       {month}
@@ -65,7 +65,7 @@ export const displayingMatches = (arr: Matches) => {
       <br />
       {time}
       <br />
-      vs {opponent}
+      vs <span className="font-medium">{opponent}</span>
     </div>
   ));
 };

@@ -25,17 +25,13 @@ function App() {
     };
   }, []);
   return (
-    <main className={`${backGroundVariants["secondary"]} flex flex-col`}>
+    <main
+      className={`${backGroundVariants["secondary"]} flex flex-col relative`}
+    >
       <ThemeButtonsComponent />
       <LandingPage scrolled={scrolled}>
-        {/* <div
-          className={`transition-all duration-500 z-20  ${
-            scrolled ? "opacity-100 invert-0" : " opacity-0"
-          }`}
-        > */}
         <WatchUsPlay scrolled={scrolled} />
         <UpcomingMatches scrolled={scrolled} matches={upcomingMatches} />
-        {/* </div> */}
       </LandingPage>
     </main>
   );

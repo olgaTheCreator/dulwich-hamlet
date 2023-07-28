@@ -18,6 +18,9 @@ module.exports = {
         player: "url('/src/assets/player.png')",
         halftones: "url('/src/assets/pinkHalftones.svg')",
       },
+      fontFamily: {
+        rubik: ["Rubik"],
+      },
       colors: {
         dark: {
           background: "#1c1a29",
