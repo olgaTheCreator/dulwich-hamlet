@@ -6,6 +6,7 @@ import dns from "dns";
 dns.setDefaultResultOrder("verbatim");
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/dulwich-hamlet/',
   server: {
     host: true,
     port: 5173,
