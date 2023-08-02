@@ -13,7 +13,7 @@ export const UpcomingMatches = ({
     <div
       className={`bg-repeat-x bg-halftones bg-top w-full bg-cover font-rubik text-2xl font-semibold text-text-base  flex place-content-center ${
         backGroundVariants["secondary"]
-      } h-max transition-all duration-500 z-20  ${
+      } h-max transition-all duration-300 z-20  ${
         scrolled ? "opacity-100 invert-0" : " opacity-0"
       }`}
     >

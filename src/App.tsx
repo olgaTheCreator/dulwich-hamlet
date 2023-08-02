@@ -33,6 +33,7 @@ function App() {
         <WatchUsPlay scrolled={scrolled} />
         <UpcomingMatches scrolled={scrolled} matches={upcomingMatches} />
       </LandingPage>
+      <div className="h-32"></div>
     </main>
   );
 }
